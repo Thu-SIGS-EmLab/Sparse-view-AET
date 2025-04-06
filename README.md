@@ -4,7 +4,7 @@ The NSIRE package performs iterative sampling from the data distribution of atom
 
 # Example: AET reconstruction of PtCo
 Through range-null space decomposition and ancestor sampling, the posterior mean x_0|t corresponding to each noisy tomogram xt is gradually guided to the region of the atomic manifold satisfying the projection constraint.
-![rec](https://github.com/user-attachments/assets/85801b3c-96f7-4d3e-99bd-1f406d897536)
+![rec]([https://github.com/user-attachments/assets/85801b3c-96f7-4d3e-99bd-1f406d897536](https://github.com/LIHAN8099/Sparse-view-AET/blob/main/rec.gif))
 
 
 
