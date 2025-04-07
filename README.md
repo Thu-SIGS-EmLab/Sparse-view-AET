@@ -11,8 +11,8 @@ Through range-null space decomposition and ancestor sampling, the posterior mean
 
 
 # Requirements
-- numpy
 - pytorch=1.10.1
+- numpy
 - scipy
 - opencv-python
-- tqdm
+- torchvision
