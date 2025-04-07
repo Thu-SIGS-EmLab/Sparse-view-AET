@@ -5,7 +5,7 @@ The NSIRE (Null-Space Interative REconstruction) package performs iterative samp
 Through range-null space decomposition and ancestral sampling, the posterior mean x_0|t corresponding to each noisy tomogram x_t is gradually guided to the region of the atomic manifold satisfying the projection constraint y=Ax.
 
 <p align="center">
-  <img src=https://github.com/LIHAN8099/Sparse-view-AET/blob/main/rec.gif width="1500" alt="Iterative sampling process visualization"/>
+  <img src=https://github.com/LIHAN8099/Sparse-view-AET/blob/main/rec.gif width="900" alt="Iterative sampling process visualization"/>
 </p>
 
 
