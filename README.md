@@ -11,8 +11,7 @@ Through range-null space decomposition and ancestral sampling, the posterior mea
 
 
 # Requirements
-- pytorch=1.10.1
+- pytorch=1.10.0
 - numpy
 - scipy
 - opencv-python
-- torchvision
