@@ -15,3 +15,8 @@ Through range-null space decomposition and ancestral sampling, the posterior mea
 - numpy
 - scipy
 - opencv-python
+
+# Note
+- 1. The default pixel size of the pre-trained model is 0.3105 angstroms. When your experimental data is of other values, it is recommended to adjust it to around 0.3105 through interpolation.
+- 2. Please adjust the horizontal size of the projected data to 256 through cropping or padding.
+- 3. When phenomena such as stacking discontinuity or "atomic ejection" occur, please recheck the alignment or noise reduction, or increase the number of projections.
