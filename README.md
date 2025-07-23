@@ -1,4 +1,4 @@
-# Sparse-view atomic electron tomography(will be avaliabe upon the paper is accepted)
+# Sparse-view atomic electron tomography
 - Han LI ([LIHAN202000](https://github.com/LIHAN202000))
 
     The NSIRE (Null-Space Interative REconstruction) package performs iterative sampling from the data distribution of atomic potential using a diffusion model until atomic tomogram that subject to the ADF-STEM projection constraints are obtained, enabling high accuracy (<20pm RMSD and ~0.1 R1 factor error) three-dimensional atomic structure reconstruction under sparse-view (10 to 20 projections), assists the AET reconstruction of irradiated sensitive samples and ultra-small nanoparticles.
