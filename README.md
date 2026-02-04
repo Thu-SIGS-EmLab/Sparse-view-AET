@@ -17,9 +17,9 @@ Through range-null space decomposition and ancestral sampling, the posterior mea
 - opencv-python
 
 # Note
-- The default pixel size of the pre-trained model is 0.3105 angstroms. When your experimental data is of other values, it is recommended to adjust it to around 0.3105 through interpolation.
+- When phenomena such as stacking discontinuity or "atomic distortion" occur, please recheck the alignment or noise reduction, or increase the number of projections.
 - Please adjust the horizontal size of the projected tilt-series of nanoparticles to 256 through cropping or padding.
-- When phenomena such as stacking discontinuity or "atomic ejection" occur, please recheck the alignment or noise reduction, or increase the number of projections.
+- The default pixel size of the pre-trained model is 31.05 pm. When your experimental data is of other values, it is recommended to adjust it to around 31.05 through interpolation.
 
 # Run AET reconstruction
 
