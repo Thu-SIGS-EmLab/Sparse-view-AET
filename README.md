@@ -24,20 +24,18 @@ Through range-null space decomposition and ancestral sampling, the posterior mea
 # Run AET reconstruction
 
 for small nanoparticle (256):
-
 - python main_256.py --ni --config tomography256.yml --eta 0.85 --sigma_y 0.05 --ckpt "log/Pt_potential256.pt" -i Pt_LA --data_dir "examples/Pt_LA_exp/"
 - python main_256.py --ni --config tomography256.yml --eta 0.85 --sigma_y 0.05 --ckpt "log/Pt_potential256.pt" -i Pt_LA --data_dir "examples/MoS2/"
 
 for large-sized nanoparticle (384):
 
-- python main_384.py --ni --config tomography384.yml --eta 0.85 --sigma_y 0.05 --ckpt "log/Pt_potential384.pt" -i HEA --data_dir "examples/HEA/"
+- python main_384.py --ni --config tomography384.yml --eta 0.85 --sigma_y 0.05 --ckpt "log/Pt_potential384.pt" -i glass --data_dir "examples/glass/"
+- python main_384.py --ni --config tomography384.yml --eta 0.85 --sigma_y 0.05 --ckpt "log/Pt_potential384.pt" -i Zr --data_dir "examples/Zr/"
 
 for thin-film specimens:
-
 - python main_film.py --ni --config tomography256.yml --eta 0.85 --sigma_y 0.05 --ckpt "log/Pt_potential256.pt" -i Ta --data_dir "examples/Ta/"
 
 # Train your new score network
 
 - python training_pre.py 
-
 - mpirun -n 8 python image_train.py --data_dir ./training_set/ --image_size 64 --num_channels 64 --num_res_blocks 3 --learn_sigma False --diffusion_steps 1000 --noise_schedule linear --lr 1e-4 --microbatch 128
