@@ -25,7 +25,7 @@ Through range-null space decomposition and ancestral sampling, the posterior mea
 
 for small nanoparticle (256 pixels):
 - python main_256.py --ni --config tomography256.yml --eta 0.85 --sigma_y 0.05 --ckpt "log/Pt_potential256.pt" -i Pt_LA --data_dir "examples/Pt_LA_exp/"
-- python main_256.py --ni --config tomography256.yml --eta 0.85 --sigma_y 0.05 --ckpt "log/Pt_potential256.pt" -i Pt_LA --data_dir "examples/MoS2/"
+- python main_256.py --ni --config tomography256.yml --eta 0.85 --sigma_y 0.05 --ckpt "log/Pt_potential256.pt" -i MoS2 --data_dir "examples/MoS2/"
 
 for large-sized nanoparticle (384 pixels):
 
