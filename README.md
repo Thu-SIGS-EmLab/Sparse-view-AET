@@ -18,16 +18,16 @@ Through range-null space decomposition and ancestral sampling, the posterior mea
 
 # Note
 - The default pixel size of the pre-trained model is 0.3105 angstroms. When your experimental data is of other values, it is recommended to adjust it to around 0.3105 through interpolation.
-- Please adjust the horizontal size of the projected data to 256 through cropping or padding.
+- Please adjust the horizontal size of the projected tilt-series of nanoparticles to 256 through cropping or padding.
 - When phenomena such as stacking discontinuity or "atomic ejection" occur, please recheck the alignment or noise reduction, or increase the number of projections.
 
 # Run AET reconstruction
 
-for small nanoparticle (256):
+for small nanoparticle (256 pixels):
 - python main_256.py --ni --config tomography256.yml --eta 0.85 --sigma_y 0.05 --ckpt "log/Pt_potential256.pt" -i Pt_LA --data_dir "examples/Pt_LA_exp/"
 - python main_256.py --ni --config tomography256.yml --eta 0.85 --sigma_y 0.05 --ckpt "log/Pt_potential256.pt" -i Pt_LA --data_dir "examples/MoS2/"
 
-for large-sized nanoparticle (384):
+for large-sized nanoparticle (384 pixels):
 
 - python main_384.py --ni --config tomography384.yml --eta 0.85 --sigma_y 0.05 --ckpt "log/Pt_potential384.pt" -i glass --data_dir "examples/glass/"
 - python main_384.py --ni --config tomography384.yml --eta 0.85 --sigma_y 0.05 --ckpt "log/Pt_potential384.pt" -i Zr --data_dir "examples/Zr/"
