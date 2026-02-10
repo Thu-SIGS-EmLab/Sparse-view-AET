@@ -39,3 +39,4 @@ for thin-film specimens:
 
 - python training_pre.py 
 - mpirun -n 8 python image_train.py --data_dir ./training_set/ --image_size 64 --num_channels 64 --num_res_blocks 3 --learn_sigma False --diffusion_steps 1000 --noise_schedule linear --lr 1e-4 --microbatch 128
+
