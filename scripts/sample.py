@@ -216,7 +216,7 @@ class Diffusion(object):
         # g.manual_seed(986)
         dir = args.data_dir
 
-        angles = np.loadtxt(os.path.join(dir, "Angles.txt")) 
+        angles = np.loadtxt(os.path.join(dir, "Angles.txt"))
         print(angles)
 
         raw_proj = np.load(os.path.join(dir, "projections.npy"))
@@ -236,7 +236,6 @@ class Diffusion(object):
         for Y in Y_list:
             print(Y)
             y = yn[:, Y:Y + 8, :]
-
 
             B = 1
             x = torch.randn(B, config.data.channels, config.data.image_size,
@@ -272,7 +271,7 @@ class Diffusion(object):
                             x0_t = (xt - et * (1 - at).sqrt()) / at.sqrt()
 
                             if x_mins_one is not None:
-                                x0_t[:,:2, :, :] = x_mins_one
+                                x0_t[:, :2, :, :] = x_mins_one
 
                             if sigma_t >= at_next * sigma_y:
                                 lambda_t = 1.
@@ -425,22 +424,6 @@ def betas_for_alpha_bar(num_diffusion_timesteps, alpha_bar, max_beta=0.999):
         t2 = (i + 1) / num_diffusion_timesteps
         betas.append(min(1 - alpha_bar(t2) / alpha_bar(t1), max_beta))
     return np.array(betas)
-
-
-def LOG(iter, data):
-    data = data.to("cpu")
-    img = data.squeeze().permute(1, 2, 0)[:, :, 4].numpy()
-    img = img / np.max(img) * 255
-    cv2.imwrite("LOG_xt/%s.png" % iter, img)
-    return
-
-
-def LOG1(iter, data):
-    data = data.to("cpu")
-    img = data.squeeze().permute(1, 2, 0)[:, :, 4].numpy()
-    img = img / np.max(img) * 255
-    cv2.imwrite("LOG_x0t/%s.png" % iter, img)
-    return
 
 
 def circle(size, radius):
